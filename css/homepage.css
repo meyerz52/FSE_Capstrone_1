@@ -1,0 +1,260 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #EEEEEE
+}
+
+nav {
+    margin-bottom: 1em;
+    background-color: #222831;
+    padding: 0.45em .75em;
+    box-shadow: 12px 10px 11px -5px rgba(57, 62, 70, 0.55);
+
+}
+
+nav .header-nav-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-items {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: flex-start;
+}
+
+.nav-items li:nth-child(2) {
+    order: -1;
+}
+
+ul .nav-item {
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.splash-screen-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+}
+
+.splash-item-image {
+    width: 75vw;
+    height: 100%;
+    padding: 0 3em 0 0.5em;
+    padding-right: 3em;
+}
+
+.splash-text-container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 6.5% 5%;
+}
+
+.tagline-text-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.tagline {
+    font-size: 8vh;
+    font-weight: 800;
+    margin-bottom: 2vh;
+}
+
+.sub-tagline {
+    font-size: 1.5em;
+    font-weight: 100;
+    color: gray;
+}
+
+.shopping-category-container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 10%;
+}
+
+.shopping-category-container h1 {
+    align-self: center;
+    padding-bottom: 4%;
+    font-size: 6.5vh;
+    font-weight: 800;
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 0 0.5em;
+}
+
+
+.img-item {
+    position: relative;
+    margin-bottom: 2em;
+    flex-basis: 350px;
+}
+
+
+.img-item button {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    background-color: #EEEEEE;
+    color: #222831;
+}
+
+.img-item button:hover {
+    background-color: #393E46;
+    color: white;
+}
+
+.img-item img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.shop-now-button {
+    align-self: flex-start;
+    border: none;
+    border-radius: 15px;
+    background-color: #393E46;
+    font-size: 1rem;
+    color: white;
+    padding: 20px 40px;
+    margin-top: 30%;
+    max-width: 100%;
+}
+
+.shop-now:hover {
+    border-color: #222831;
+    border-style: solid;
+    background-color: #EEEEEE;
+    color: black;
+}
+
+footer {
+    padding: 50px 25px;
+    background-color: #9e9e9e;
+}
+
+.footer-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.footer-container>div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    height: 125px;
+}
+
+.footer-container div:nth-child(-n+2) {
+    justify-content: space-between;
+}
+
+.links>a {
+    text-decoration: none;
+    color: #222831;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.address h3:first-child {
+    padding-bottom: 13px;
+}
+
+.address h3:nth-last-child(2) {
+    padding-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fa-brands {
+    padding: 20px 0 0 0;
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+    color: #222831;
+}
+
+
+.newsletter-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.newsletter-container h3 {
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+.newsletter-container input[type=email] {
+    color: white;
+    border: none;
+    border-bottom: 1px solid #393E46;
+    width: 340px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    background: none;
+
+}
+
+.newsletter-signup-form {
+    position: relative;
+}
+
+.newsletter-container input[type=submit] {
+    border: none;
+    font-weight: 400;
+    font-size: .85em;
+    background: none;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    padding: 5px 12px;
+    border-radius: 8px
+}
+
+.newsletter-container input[type=submit]:hover {
+    background-color: #393E46;
+    color: white;
+}
