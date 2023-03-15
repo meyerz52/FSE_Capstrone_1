@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #eeee;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.left-navbar {
+    display: flex;
+    width: 35%;
+}
+
+.product-nav {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-self: flex-end;
+    flex: 1 1 50%;
+}
+
+.product-item {
+    display: flex;
+    padding: 0 1.5rem;
+    align-items: center;
+}
+
+.product-item .fa-angle-down {
+    padding-left: 8px;
+}
+
+@media screen and (max-width:375px) {
+    .product-nav {
+        display: none;
+    }
+}
+
+.parent-grid-container {
+    display: grid;
+    grid-template: 800px 0.25fr 0.5fr 0.35fr 0.5fr 500px/ .5fr 3fr 100px
+}
+
+.hero {
+    display: flex;
+    grid-column: 1/-1;
+    grid-row: 1;
+    margin: 0;
+    padding: 0 10px;
+    position: relative;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 25%;
+}
+
+.hero-overlay div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 5%;
+}
+
+.hero-overlay h1 {
+    font-size: 5rem;
+    color: #EEEEEE;
+    letter-spacing: 0.1rem;
+}
+
+.hero-overlay button {
+    align-self: flex-start;
+    border: none;
+    border-radius: 15px;
+    background-color: #393E46;
+    font-size: 1rem;
+    color: white;
+    padding: 1.2rem 1.3rem;
+}
+
+
+
+@media screen and (max-width:900px) {
+    .hero {
+        grid-row: 1/span 12;
+    }
+}
+
+.card-container {
+    display: flex;
+    grid-column: 2;
+    overflow: auto;
+}
+
+.card-container.mens {
+    grid-row: 3;
+}
+
+.card-container.womens {
+    grid-row: 5;
+}
+
+
+.cards {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin: 0;
+    padding: 0;
+}
+
+.product-card {
+    scroll-snap-align: start;
+    margin: 0 10px 100px 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 100%;
+    width: 400px;
+    flex-grow: 1;
+    padding-bottom: 6%;
+}
+
+
+.card-content span {
+    padding-top: 10px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.card-content a {
+    font-size: .9rem;
+    text-decoration: none;
+    color: hsl(0, 0%, 70%);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+
+.card-content i {
+    padding-left: 8px;
+}
+
+.section-header {
+    grid-column: 2;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #393E46;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+}
+
+.section-header h2::selection {
+    background-color: #393E46;
+    color: white;
+    align-self: start;
+}
+
+.section-header.mens {
+    grid-row: 2;
+    align-self: end;
+    padding: 115px 0 35px 0;
+
+}
+
+.section-header.womens {
+    grid-row: 4;
+    padding: 115px 0 35px 0;
+    align-self: end;
+
+}
+
+.cards::-webkit-scrollbar {
+    height: 3px;
+}
+
+/* Track */
+.cards::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 70%);
+}
+
+/* Handle */
+.cards::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.cards::-webkit-scrollbar-thumb:hover {
+    background: purple;
+}
