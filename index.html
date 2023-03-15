@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
@@ -19,6 +24,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/homepage.css" type="text/css" />
+    <link rel="stylesheet" href="css/signup.css" type="text/css" />
     <title>Sportsverse</title>
 
 </head>
@@ -40,17 +46,26 @@
                                 <span>Shop</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#">
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
-                                <span>Login</span>
+                                <span>User</span>
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <button type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal"
+                                    data-bs-target="#registrationeModal">
+                                    Sign-up
+                                </button>
+                                <li><a class="dropdown-item" href="#">Login</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <i class="fa-solid fa-address-card"></i>
                                 <span>Contact</span>
                             </a>
+
                         </li>
                     </ul>
 
@@ -111,6 +126,7 @@
                         <button class="shop-now-button">Shop Pickleball</button>
                     </li>
                 </ul>
+
             </div>
             <footer>
                 <div class="footer-container">
@@ -151,6 +167,41 @@
             </footer>
         </article>
     </main>
+    <!-- Modal -->
+    <div class="modal" id="registrationeModal" tabindex="-1" aria-labelledby="registrationeModal" aria-hidden="true"
+        data-easein="fadeIn">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="split-screen">
+                        <div class="main-content">
+                            <img class="logo" src="images/logos/logo-black.png" alt="">
+                            <div class="header-text">
+                                <h1>Create a account</h1>
+                                <h3>Complete signup below.</h3>
+                            </div>
+                            <div class="input-main">
+                                <input type="email" id name="EMAIL" placeholder="Email:">
+                                <input type="password" id name="PASSWORD" placeholder="Password:">
+                                <input type="submit" id name="SUBMIT" data-bs-dismiss="modal">
+                            </div>
+                            <div class="sign-in-component">
+                                <span>Already have an account? <a href="registration.html" data-bs-dismiss="modal">Sign
+                                        in</a></span>
+                            </div>
+                            <div class="mountain-container">
+                                <img src="images/mountain_background.svg" alt="">
+                            </div>
+
+                        </div>
+                        <img src="images/stock/sign_up_splash_405x720.jpeg" alt="">
+                    </div>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal"><i
+                            class="fa-regular fa-circle-xmark"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
