@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    position: fixed;
+    max-width: 600px;
+    max-height: 900px;
+    border: 2px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.split-screen {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 500px;
+    position: relative;
+}
+
+.split-screen>img {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    object-fit: cover;
+    box-shadow: -5px 0px 5px -3px rgba(0, 0, 0, 0.57);
+}
+
+.main-content {
+    display: flex;
+    flex-flow: column wrap;
+    width: 65%;
+    position: relative;
+    padding: 10px;
+}
+
+.logo {
+    width: 75%;
+    align-self: center;
+    margin-bottom: 3%;
+}
+
+.header-text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 10%;
+    justify-content: flex-start;
+    color: #393E46;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.header-text h3 {
+    font-size: .75rem;
+    font-weight: 100;
+}
+
+.input-main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input-main input {
+    margin-top: 15px;
+}
+
+.input-main input:nth-child(n-2) {
+    border: 2px solid #393E46;
+    padding: 10px 0 10px 10px;
+    background-color: #EEEEEE;
+    color: black;
+}
+
+::placeholder {
+    color: #393E46;
+}
+
+.input-main input[type="submit"] {
+    background-color: #393E46;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: .75rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+}
+
+.sign-in-component {
+    padding-top: 10px;
+}
+
+.sign-in-component span {
+    color: #393E46;
+    font-size: 0.75rem;
+    font-weight: 100;
+}
+
+.sign-in-component a {
+    color: black;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+
+.mountain-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: flex;
+
+}
+
+.mountain-container>img {
+    width: 100%;
+}
+
+.fa-circle-xmark {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 2em;
+}
+
+i:hover {
+    color: white;
+}
